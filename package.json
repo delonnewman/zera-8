@@ -1,0 +1,15 @@
+{
+  "name": "zera-8",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "",
+  "main": "zera.js",
+  "scripts": {
+    "test": "npx jasmine"
+  },
+  "author": "Delon Newman <contact@delonnewman.name>",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^5.2.0"
+  }
+}
