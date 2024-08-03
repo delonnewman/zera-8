@@ -5,11 +5,12 @@
   "description": "",
   "main": "zera.js",
   "scripts": {
-    "test": "npx jasmine"
+    "test": "npx vitest"
   },
   "author": "Delon Newman <contact@delonnewman.name>",
   "license": "MIT",
   "devDependencies": {
-    "jasmine": "^5.2.0"
+    "eslint": "^9.8.0",
+    "vitest": "^2.0.4"
   }
 }
