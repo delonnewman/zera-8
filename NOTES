@@ -1,8 +1,0 @@
-(console log "Hello")
-
-# const dialog = new ZDialog()
-# dialog.dispatch(ZObject.alien(console), ZMessage.binary('log', ZObject.string("Hello")))
-
-(1 + (2 + 3))
-
-# dialog.dispatch(ZObject.integer(1), ZMessage.binary('+', ZDispatch.send(ZObject.integer(2), ZMessage.binary('+', ZObject.integer(3)))))
