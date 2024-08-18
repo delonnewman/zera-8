@@ -9,9 +9,17 @@
 
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+        <style>
+         @media (prefers-color-scheme: dark) {
+             body {
+                 background: black;
+                 color: white;
+             }
+         }
+        </style>
     </head>
     <body>
+        <h1>Hi!</h1>
         <!--[if lt IE 8]>
             <p class="browserupgrade">
             You are using an <strong>outdated</strong> browser. Please
@@ -20,22 +28,22 @@
             </p>
         <![endif]-->
 
-        <script type="importmap">
-         {
-             "imports": {
-                 "ZObject": "./lib/ZObject.js",
-                 "ZMessage": "./lib/ZMessage.js",
-                 "ZAlien": "./lib/ZAlien.js",
-                 "main": "./main.js"
-             }
-         }
-        </script>
         <script type="module">
          import ZAlien from './lib/ZAlien.js';
+         import ZAlienClass from './lib/ZAlien.js';
          import ZMessage from './lib/ZMessage.js';
+         import ZScript from './lib/ZScript.js';
 
-         const JSConsole = new ZAlien(console);
-         JSConsole.send(ZMessage.binary('error', "Hi"));
+         const JSConsole = ZAlien.new(console);
+         const JSArray = ZAlienClass.new(Array);
+
+         const script = new ZScript();
+         script
+             .identify(script.sayAndAwait(JSArray, ZMessage.unary('new')), { as: 'a' })
+             .callUpon('a')
+             .andThenSay(ZMessage.binary(0, 1, new Map([['assignment', true]])))
+             .say(JSConsole, ZMessage.binary('log', script.callUpon('a')))
+             .perform();
         </script>
     </body>
 </html>
