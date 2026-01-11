@@ -1,17 +1,18 @@
 #+title: Notes
 
-* Send
-- Subject
-- Message
-- Sender
-  - Who e.g. Script instance
-  - Where e.g. Statement instance (line)
+* Message interning
 
-* Message
-- Unary
-- Binary
-- Keyword
-- ArgumentList
+** Unary
+not = not
 
-* References
-https://en.wikipedia.org/wiki/Virtual_method_table
+** Arity
+list(*elems)  = list__1 # arity = -1
+cons(x, list) = cons_2 # arity = 2
+first(list)   = first_1  # arity = 1
+
+** Binary
+1 + 2 = bin_+
+true and false = bin_and
+
+** Keyword
+if: { } else: { } = kw_if_else
