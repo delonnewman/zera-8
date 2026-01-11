@@ -1,0 +1,17 @@
+#+title: Notes
+
+* Send
+- Subject
+- Message
+- Sender
+  - Who e.g. Script instance
+  - Where e.g. Statement instance (line)
+
+* Message
+- Unary
+- Binary
+- Keyword
+- ArgumentList
+
+* References
+https://en.wikipedia.org/wiki/Virtual_method_table
